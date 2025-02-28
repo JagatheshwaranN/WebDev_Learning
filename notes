@@ -10,3 +10,9 @@ Types of Style sheets
 3. LESS (Leaner Style Sheets)
 
 'Hakon Wium Lie' is a father of Cascading Style Sheet.
+
+1px => 1/96th inch [0.26mm]
+1pt => 1/72nd inch [0.35mm]
+1em => 100% of parent
+1rem => 100% of root
+
