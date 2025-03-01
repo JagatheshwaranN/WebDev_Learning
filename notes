@@ -16,3 +16,20 @@ Types of Style sheets
 1em => 100% of parent
 1rem => 100% of root
 
+CSS Specificity Order
+=====================
+1. Id
+2. Attribute
+3. Class
+4. Element
+
+Type Order
+=========
+1. Inline
+2. Internal
+3. External
+
+Importance Keyword
+==================
+color: red;
+color: green !important; // It has the highest priority order.
