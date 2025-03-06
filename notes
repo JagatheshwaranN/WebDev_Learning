@@ -28,8 +28,39 @@ Type Order
 1. Inline
 2. Internal
 3. External
-
+ 
 Importance Keyword
 ==================
 color: red;
 color: green !important; // It has the highest priority order.
+
+Combine CSS Selectors
+=====================
+1. Grouping Selectors
+selector1, selector2 {
+    color: green;
+}
+
+2. Child Selector 
+Child = Apply to direct child of left side
+parent > child {
+    color: firebrick;
+}
+
+3. Descendent Selector
+Descendant = Apply to a descendant of left side
+ancestor descendant {
+    color: blue;
+}
+
+4. Chaining Selectors
+Chaining = Apply where ALL selectors are true
+selectorselector {
+    color: seagreen;
+}
+
+5. Combining Combiners
+ancestor   chaining
+selector selectorselector {
+    font-size: 2rem;
+}
