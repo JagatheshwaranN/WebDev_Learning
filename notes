@@ -64,3 +64,13 @@ ancestor   chaining
 selector selectorselector {
     font-size: 2rem;
 }
+
+CSS Positions
+=============
+1. Static [Default HTML flow]
+2. Relative [Position relative to default position]
+3. Absolute [Position relative to nearest positioned ancestor or top-left corner of webpage]
+    a. Z-index [Used to move the element before / after the other element]
+    b. if value is -1, it will be after. If value is 0, it will be before.
+4. Fixed [Position relative to top left corner or browser window]
+
