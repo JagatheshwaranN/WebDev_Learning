@@ -74,3 +74,112 @@ CSS Positions
     b. if value is -1, it will be after. If value is 0, it will be before.
 4. Fixed [Position relative to top left corner or browser window]
 
+CSS Display
+===========
+1. inline
+Note: When we have display property of an element is set to inline, then we can't change
+the size of the element such as width / height.
+2. block
+Note: When we have display property of an element is set to block, then the element can
+take up the entire width on the page and next element would go in next line.
+3. inline-block
+Note: When we have display property of an element is set to inline-block, then block allows
+us to set the height & width. inline makesure that element is in same line.
+4. none
+Note: When we set the display as none, it will make the element to disappear.
+
+CSS Float
+=========
+float: left [Allows the element to float towards left.]
+clear: left [Allows the element to bypass the float value by clearing the same.]
+
+Responsive Websites
+===================
+We can achieve responsiveness using below 4 options.
+1. Media queries
+2. CSS Flexbox
+3. CSS Grid
+4. External Frameworks e.g. Bootstrap
+
+Media Query
+===========
+@media(max-midth: 600px) {
+    <!-- CSS for screens below or equal to 600px wide -->
+}
+
+CSS Grid
+========
+.grid-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr; [fr - equal fraction]
+    grid-template-rows: 100px 200px 200px; [It denotes 3 rows will be of different sizes.]
+    gap: 30px;
+}
+
+CSS Flexbox
+===========
+Flexbox allows us to define the 1D layout either horizontally or vertically.
+
+.flex-container {
+    display: flex;
+}
+
+.card {
+    background: blue;
+    border: 30px solid white;
+    height: 100px;
+    flex: 1; [It will make each of the cards to have equal width distribution]
+}
+
+.first {
+    flex: 2; [It will have the twice the width of the unmodified cards.]
+}
+
+.second {
+    flex: 0.5; [It will have the half size of the width of the unmodified cards.]
+}
+
+Bootstrap Framework
+===================
+The reason why its called as Framework is, becuase its external and not something
+built in CSS like Grid / Flexbox.
+We are using the other people code in our project using Bootstrap. What the team
+did was, they wrote the bunch of classes, they put different rules for different
+selectors.
+The Bootstrap team code will applied to our code, by simply putting in the Bootstap
+framework and then adding a class name.
+Bootstrap is built on top of Flexbox.
+
+Example
+=======
+<div class="container">
+<div class="row">
+<div class="card col-6">Card</div>
+<div class="card col-2">Card</div>
+<div class="card col-4">Card</div>
+</div>
+</div>
+
+Media Query Usages
+==================
+Single
+======
+@media(max-midth: 600px) {
+    <!-- CSS for screens below or equal to 600px wide -->
+}
+
+Combine
+=======
+@media(min-width: 600px) and (max-width: 900px) {
+    <!-- CSS for screens between 600px and 900px wide -->
+}
+
+Device
+======
+@media screen(orientation: landscape) {
+    <!-- Styles for landscape orientation -->
+}
+
+Reference - https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_media_queries/Using_media_queries
+
+
