@@ -182,4 +182,29 @@ Device
 
 Reference - https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_media_queries/Using_media_queries
 
+CSS Flexbox
+===========
+Float can be used for Magazine-style layouts.
+Flexbox/Grid/Bootstrap can be used for overall page structure.
+
+<div class="container">
+<div class="one"><p>..</p></div>
+<div class="two"><p>..</p></div>
+<div class="three"><p>..</p></div>
+</div>
+
+.container {
+    display: flex;
+    gap: 10px;
+}
+
+A DIV element is by default have block display property of full width.
+A SPAN element is by default have inline display property.
+A P element is by default have block display property of full width.
+An IMG element is by default have inline display property.
+
+When we set display: flex, the whole width will be occupied. But, when we
+set the display: inline-flex, then the width space of actual element size
+is occupied.
+
 
