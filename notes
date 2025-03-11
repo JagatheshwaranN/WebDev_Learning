@@ -203,8 +203,57 @@ A SPAN element is by default have inline display property.
 A P element is by default have block display property of full width.
 An IMG element is by default have inline display property.
 
+display: flex / inline-flex
 When we set display: flex, the whole width will be occupied. But, when we
 set the display: inline-flex, then the width space of actual element size
 is occupied.
+
+CSS Flex Direction
+==================
+1. row [We can have the flexbox to order row wise]
+2. column [We can have the flexbox to order column wise]
+
+We have 2 axes, one is Main axis, and the other one is cross axis.
+
+When we set the direction to row, then main axis flow from left to right.
+The cross axis flows perpendicular to the main axis.
+
+When we set the direction to column, then main axis flow from top to bottom.
+The cross axis flows perpendicular to the main axis.
+
+flex-basis: 100px, when we set it in row direction, it increases the width.
+flex-basis: 100px, when we set it in column direction, it increases the height.
+
+CSS Flex Layout
+===============
+Its a child property.
+1. order: 0;  [Example: order: 10;]
+By default, the order property is set to 0. If its set some value, then the element
+will move next to the element less than the value element.
+
+2. flex-wrap: nowrap / wrap;
+Its a parent property which means it set on the container.
+When nowrap is set, the element will stored on same line.
+When wrap is set, the element will stored on line and then move to the next line.
+wrap will work when the size of the screen reduces.
+
+Note: reversewrap, it is used to wrap the elements from top / start.
+
+3. Justify-Content: flex-start / flex-end / center / space-between / space-around / space-evenly
+This property is set on parent, which means it set to the container.
+
+4. align-items: flex-start / flex-end / center / base-line / stretch
+   height: 70vh
+Justify-Content works in a main axis, which x-axis. When we set the align-items, it works in
+y-axis. align-items have to be used with height property. 'height:70vh'
+
+Important Note: When flex-wrap is set to 'wrap' then align-items will not work as per our undestanding.
+Instead we can use below align-content property.
+
+5. align-content: center 
+   flex-wrap: wrap
+   height: 70vh
+
+
 
 
