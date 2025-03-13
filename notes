@@ -254,6 +254,72 @@ Instead we can use below align-content property.
    flex-wrap: wrap
    height: 70vh
 
+CSS Sizing
+==========
+The CSS Flex sizing works based on the below principle.
+content width < width < flex-basis < min-width / max-width
 
+The max-width is determined from the longest line.
 
+|---------------------------------------|
+The best programming school in the world.
 
+The min-width is determined from the longest word.
+|---------|
+ The best 
+programming 
+school in 
+the world.
+
+Flex Container
+display: flex;
+gap: 10px;
+
+Flex Items
+width: 100px; [When below flex-basis is set, then width is overriden]
+------------------
+flex-basis: 200px; [When below max-width is set, then flex-basis is overriden]
+------------------
+max-width: 100px; [When below min-width is set, then max-width is overriden]
+------------------
+min-width: 300px;
+
+Grow & Shrink
+=============
+flex-basis: 100px;
+flex-grow: 0;
+flex-shrink: 0;
+
+flex-basis: 100px;
+flex-grow: 1;
+flex-shrink: 0;
+
+flex-basis: 100px;
+flex-grow: 0;
+flex-shrink: 1;
+
+flex-basis: 100px; [Ignored]
+flex-grow: 1;
+flex-shrink: 1;
+
+flex-basis: 0;
+flex-grow: 1;
+flex-shrink: 1;
+
+Short form
+==========
+flex: 1 1 0
+first -> grow
+second -> shrink
+third -> basis
+
+further simplified
+==================
+flex: 1
+grow, shrink are 1
+basis is 0.
+
+References
+==========
+https://css-tricks.com/snippets/css/a-guide-to-flexbox/
+https://appbrewery.github.io/flexboxfroggy/
