@@ -319,6 +319,30 @@ flex: 1
 grow, shrink are 1
 basis is 0.
 
+Grid
+====
+
+Flex Vs Grid
+============
+1. Flex is suitable for 1D alignment.
+1. Grid is suitable for 2D alignment.
+
+2. We can have Flex-box inside Grid.
+2. We can have Grid inside Flexbox.
+
+Grid Properties
+===============
+.grid-container {
+    display: grid;
+    grid-template-rows: 100px auto;
+    grid-template-columns: 200px auto;
+}
+
+Note:
+=====
+The auto keyword on a row helps to make the row size to fit the content except the first row which is fixed.
+The auto keyword on a column helps to make the column size to 100% of the witdh except the first column.
+
 References
 ==========
 https://css-tricks.com/snippets/css/a-guide-to-flexbox/
