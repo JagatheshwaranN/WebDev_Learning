@@ -334,14 +334,106 @@ Grid Properties
 ===============
 .grid-container {
     display: grid;
+    grid-template-rows: 100px 200px;
+    grid-template-columns: 200px 400px;
+}
+
+The above property has the fixed size and which is not going to be responsive.
+We can also use rem unit to specify the size but still it will not be responsive
+as per the screen size.
+
+.grid-container {
+    display: grid;
+    grid-template: 100px 200px / 200px 400px;
+}
+
+The shorthand notation for grid rows and columns. [Not Recommended]
+
+.grid-container {
+    display: grid;
     grid-template-rows: 100px auto;
     grid-template-columns: 200px auto;
 }
 
 Note:
 =====
+The use of auto gives us the little responsiveness.
 The auto keyword on a row helps to make the row size to fit the content except the first row which is fixed.
 The auto keyword on a column helps to make the column size to 100% of the witdh except the first column.
+
+.grid-container {
+    display: grid;
+    grid-template-rows: 1fr 2fr;
+    grid-template-columns: 1fr 2fr;
+}
+
+Note:
+=====
+We can set the layout of the sizing using fractional property as above. The fractional property provides
+the responsiveness.
+
+.grid-container {
+    display: grid;
+    grid-template-rows: 200px 400px;
+    grid-template-columns: 200px minmax(400px, 800px);
+}
+
+Note:
+=====
+Here, the responsiveness is going to be strict as per the minmax sizing. The max size would be 800px 
+and min size would be 400px.
+
+.grid-container {
+    display: grid;
+    grid-template-rows: repeat(2, 200px);
+    grid-template-columns: repeat(2, 100px);
+}
+
+Note:
+=====
+Here, instead of flooding with  fractional values, we can use the repeat method to have the use of
+fractional values as many times as we need.
+
+.grid-container {
+    display: grid;
+    grid-template-rows: 200px 200px;
+    grid-template-columns: 200px 200px;
+    grid-auto-rows: 300px;
+    grid-auto-columns: 300px;
+}
+
+Note:
+=====
+When we have more rows / columns added to the layout which is not in grid, for those items we can
+provide the auto values.
+
+Excercise
+=========
+My Thought Process
+==================
+/* Write your CSS code below to make the purple items size, grow and shrink like the green ones.*/
+
+.grid-container {
+
+ display: grid;
+ grid-template-rows: 65px 65px 130px;
+ grid-template-columns: auto 400px minmax(200px, 500px);
+ grid-auto-rows: 50px; 
+}
+
+
+Learnt from Sissy
+=================
+/* Write your CSS code below to make the purple items size, grow and shrink like the green ones.*/
+
+.grid-container {
+
+ display: grid;
+ grid-template-rows: 1fr 1fr 2fr
+ grid-template-columns: auto 400px minmax(200px, 500px);
+ grid-auto-rows: 50px;
+}
+
 
 References
 ==========
