@@ -429,9 +429,32 @@ Learnt from Sissy
 .grid-container {
 
  display: grid;
- grid-template-rows: 1fr 1fr 2fr
+ grid-template-rows: 1fr 1fr 2fr;
  grid-template-columns: auto 400px minmax(200px, 500px);
  grid-auto-rows: 50px;
+}
+
+Grid Placement
+==============
+1. The rows and columns created in the grid is collectively called as Row Tracks and Column Tracks.
+2. The lines separate the rows and columns are called as Grid lines.
+3. The common terms in Grid are container, lines, tracks, cells, and items. All these together
+   combined to create the layouts.
+
+
+Grid layout
+===========
+.cowboy {
+    background-color: blue;
+    grid-column: span 2;
+    grid-column-start: 2;
+    grid-column-end: 4;
+}
+
+.cowboy {
+    background-color: blue;
+    grid-column-start: 1; // It fits the left most column of the grid.
+    grid-column-end: -1; // It fits the right most column of the grid.
 }
 
 
